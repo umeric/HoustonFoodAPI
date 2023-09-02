@@ -1,0 +1,33 @@
+# SQL Queries
+
+Below are some SQL queries used in this project for analyzing Houston restaurant data.
+
+**Query 1: Highest Rated Food in Houston**
+**Description:** This query provides insights into the highest-rated food in Houston.
+
+```sql
+SELECT * FROM [dbo].[HoustonFood]
+WHERE [rating] > 4.5;
+```
+
+**Query 2: Top Restaurants with High Ratings and Most Ratings**
+**Description:** This query selects the top restaurants with the highest ratings as well as the most ratings.
+
+```sql
+SELECT TOP (5) [name], [rating], [user_ratings_total]
+FROM [dbo].[HoustonFood]
+WHERE [rating] > 4.5 AND [user_ratings_total] > 100
+ORDER BY [rating] DESC, [user_ratings_total] DESC;
+```
+
+**Query 3: Top 5 Affordable Restaurants with High Ratings**
+**Description:** This query selects the top 5 affordable restaurants with the highest ratings.
+
+```sql
+SELECT TOP (5) [name], [rating], [price_level], [user_ratings_total]
+FROM [dbo].[HoustonFood]
+WHERE [price_level] < 3.0 AND [rating] > 4.0
+ORDER BY [rating] DESC;
+```
+
+
