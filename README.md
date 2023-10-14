@@ -1,6 +1,6 @@
 # HoustonRestaurantAPI
 
-Integrated Google API to retrieve data on Houston restaurants, utilizing Azure data tools to process and analyze API data.
+Integrated Google API to retrieve data on Houston restaurants, utilizing Azure data tools to process and analyze API data. 
 
 **Tools Used:**
 - Google Places API
